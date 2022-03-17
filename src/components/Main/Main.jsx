@@ -1,6 +1,15 @@
 import React from "react";
 
-import { About, Facts, Skills, Resume } from "./";
+import {
+  About,
+  Facts,
+  Skills,
+  Resume,
+  Portfolio,
+  Services,
+  Testimonials,
+  Contact,
+} from "./";
 
 const Main = () => {
   return (
@@ -10,6 +19,10 @@ const Main = () => {
       <Facts />
       <Skills />
       <Resume />
+      <Portfolio />
+      <Services />
+      <Testimonials />
+      <Contact />
     </main>
   );
 };

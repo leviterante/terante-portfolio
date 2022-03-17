@@ -4,6 +4,7 @@ import { BiChevronsRight } from "react-icons/bi";
 import { images } from "../../../constants";
 
 const About = () => {
+  var age = new Date().getFullYear() - 1996;
   return (
     <section id="about" className="about">
       <div className="container">
@@ -25,7 +26,7 @@ const About = () => {
             <img src={images.profile} alt="" className="img-fluid" />
           </div>
           <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>UI/UX Designer & Fullstack Developer.</h3>
+            <h3>Fullstack Developer & UI/UX Designer.</h3>
             <div className="row">
               <div className="col-lg-6">
                 <ul>
@@ -52,7 +53,7 @@ const About = () => {
                   <li>
                     <BiChevronsRight />
                     <strong>Age:</strong>
-                    <span>26</span>
+                    <span>{age}</span>
                   </li>
                   <li>
                     <BiChevronsRight />

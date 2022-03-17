@@ -91,7 +91,7 @@ const Resume = () => {
             </div>
             <div className="resume-item">
               <h4>Culinarian</h4>
-              <h5>2019 - 2021</h5>
+              <h5>2019 - 2020</h5>
               <p>
                 <em>
                   La Rizière - Restaurant traiteur vietnamien, Strasbourg,

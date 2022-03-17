@@ -96,32 +96,50 @@ const Header = () => {
           <ul>
             <li>
               <a href="#hero" className="nav-link scrollto">
-                <FaHome /> <span>&nbsp;Home</span>
+                <i>
+                  <FaHome />
+                </i>
+                <span>&nbsp;Home</span>
               </a>
             </li>
             <li>
               <a href="#about" className="nav-link scrollto">
-                <FaUser /> <span>&nbsp;About</span>
+                <i>
+                  <FaUser />
+                </i>
+                <span>&nbsp;About</span>
               </a>
             </li>
             <li>
               <a href="#resume" className="nav-link scrollto">
-                <FaFile /> <span>&nbsp;Resume</span>
+                <i>
+                  <FaFile />
+                </i>
+                <span>&nbsp;Resume</span>
               </a>
             </li>
             <li>
               <a href="#portfolio" className="nav-link scrollto">
-                <FaBook /> <span>&nbsp;Portfolio</span>
+                <i>
+                  <FaBook />
+                </i>
+                <span>&nbsp;Portfolio</span>
               </a>
             </li>
             <li>
               <a href="#services" className="nav-link scrollto">
-                <FaServer /> <span>&nbsp;Services</span>
+                <i>
+                  <FaServer />
+                </i>
+                <span>&nbsp;Services</span>
               </a>
             </li>
             <li>
               <a href="#contact" className="nav-link scrollto">
-                <FaEnvelope /> <span>&nbsp;Contact</span>
+                <i>
+                  <FaEnvelope />
+                </i>
+                <span>&nbsp;Contact</span>
               </a>
             </li>
           </ul>
