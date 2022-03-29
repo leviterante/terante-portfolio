@@ -7,18 +7,15 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 
+import { testimonials } from "../../../constants";
+
 const Testimonials = () => {
   return (
     <section id="testimonials" className="testimonials section-bg">
       <div className="container">
         <div className="section-title">
           <h2>Testimonials</h2>
-          <p>
-            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-            aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-            quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-            fugiat sit in iste officiis commodi quidem hic quas.
-          </p>
+          <p>See what other people think of me :</p>
         </div>
 
         <Swiper
@@ -37,96 +34,28 @@ const Testimonials = () => {
           }}
         >
           <div className="swiper-wrapper">
-            <SwiperSlide>
-              <div className="testimonial-item" data-aos="fade-up">
-                <p>
-                  <FaQuoteLeft className="quote-icon-left" />
-                  Proin iaculis purus consequat sem cure digni ssim donec
-                  porttitora entum suscipit rhoncus. Accusantium quam, ultricies
-                  eget id, aliquam eget nibh et. Maecen aliquam, risus at
-                  semper.
-                  <FaQuoteRight className="quote-icon-right" />
-                </p>
-                <img src="" className="testimonial-img" alt="" />
-                <h3>Saul Goodman</h3>
-                <h4>Ceo & Founder</h4>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="testimonial-item" data-aos="fade-up">
-                <p>
-                  <FaQuoteLeft className="quote-icon-left" />
-                  Proin iaculis purus consequat sem cure digni ssim donec
-                  porttitora entum suscipit rhoncus. Accusantium quam, ultricies
-                  eget id, aliquam eget nibh et. Maecen aliquam, risus at
-                  semper.
-                  <FaQuoteRight className="quote-icon-right" />
-                </p>
-                <img src="" className="testimonial-img" alt="" />
-                <h3>Saul Goodman</h3>
-                <h4>Ceo & Founder</h4>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="testimonial-item" data-aos="fade-up">
-                <p>
-                  <FaQuoteLeft className="quote-icon-left" />
-                  Proin iaculis purus consequat sem cure digni ssim donec
-                  porttitora entum suscipit rhoncus. Accusantium quam, ultricies
-                  eget id, aliquam eget nibh et. Maecen aliquam, risus at
-                  semper.
-                  <FaQuoteRight className="quote-icon-right" />
-                </p>
-                <img src="" className="testimonial-img" alt="" />
-                <h3>Saul Goodman</h3>
-                <h4>Ceo & Founder</h4>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="testimonial-item" data-aos="fade-up">
-                <p>
-                  <FaQuoteLeft className="quote-icon-left" />
-                  Proin iaculis purus consequat sem cure digni ssim donec
-                  porttitora entum suscipit rhoncus. Accusantium quam, ultricies
-                  eget id, aliquam eget nibh et. Maecen aliquam, risus at
-                  semper.
-                  <FaQuoteRight className="quote-icon-right" />
-                </p>
-                <img src="" className="testimonial-img" alt="" />
-                <h3>Saul Goodman</h3>
-                <h4>Ceo & Founder</h4>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="testimonial-item" data-aos="fade-up">
-                <p>
-                  <FaQuoteLeft className="quote-icon-left" />
-                  Proin iaculis purus consequat sem cure digni ssim donec
-                  porttitora entum suscipit rhoncus. Accusantium quam, ultricies
-                  eget id, aliquam eget nibh et. Maecen aliquam, risus at
-                  semper.
-                  <FaQuoteRight className="quote-icon-right" />
-                </p>
-                <img src="" className="testimonial-img" alt="" />
-                <h3>Saul Goodman</h3>
-                <h4>Ceo & Founder</h4>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="testimonial-item" data-aos="fade-up">
-                <p>
-                  <FaQuoteLeft className="quote-icon-left" />
-                  Proin iaculis purus consequat sem cure digni ssim donec
-                  porttitora entum suscipit rhoncus. Accusantium quam, ultricies
-                  eget id, aliquam eget nibh et. Maecen aliquam, risus at
-                  semper.
-                  <FaQuoteRight className="quote-icon-right" />
-                </p>
-                <img src="" className="testimonial-img" alt="" />
-                <h3>Saul Goodman</h3>
-                <h4>Ceo & Founder</h4>
-              </div>
-            </SwiperSlide>
+            {testimonials.map((testimonial) => (
+              <SwiperSlide key={testimonial.id}>
+                <div className="testimonial-item" data-aos="fade-up">
+                  <p>
+                    <FaQuoteLeft className="quote-icon-left" />
+                    {testimonial.testimonial}
+                    <FaQuoteRight className="quote-icon-right" />
+                  </p>
+                  <a href={testimonial.link}>
+                    <img
+                      src={testimonial.img}
+                      className="testimonial-img"
+                      alt=""
+                    />
+                  </a>
+                  <h3>
+                    <a href={testimonial.link}>{testimonial.name}</a>
+                  </h3>
+                  <h4>{testimonial.profession}</h4>
+                </div>
+              </SwiperSlide>
+            ))}
           </div>
           <div className="swiper-pagination"></div>
         </Swiper>

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import PureCounter from "@srexi/purecounterjs";
 import { BsEmojiSmile } from "react-icons/bs";
 import {
-  AiOutlineFieldTime,
+  AiOutlineCoffee,
   AiOutlineProject,
   AiOutlineHourglass,
 } from "react-icons/ai";
@@ -37,7 +37,7 @@ const Facts = () => {
                 data-purecounter-end="2"
                 data-purecounter-duration="1"
                 className="purecounter"
-              ></span>
+              />
               <p>
                 <strong>Happy Clients</strong> <br />
                 E-Commerce Websites
@@ -51,17 +51,17 @@ const Facts = () => {
           >
             <div className="count-box">
               <i>
-                <AiOutlineFieldTime />
+                <AiOutlineCoffee />
               </i>
               <span
                 data-purecounter-start="0"
                 data-purecounter-end="200"
                 data-purecounter-duration="1"
                 className="purecounter"
-              ></span>
+              />
               <p>
-                <strong>Hours of Hard Work</strong> <br />
-                Personal
+                <strong>Coffees drank</strong> <br />
+                Caramel machiatto
               </p>
             </div>
           </div>
@@ -79,7 +79,7 @@ const Facts = () => {
                 data-purecounter-end="5"
                 data-purecounter-duration="1"
                 className="purecounter"
-              ></span>
+              />
               <p>
                 <strong>Projects</strong> <br />
                 Diverse
@@ -100,7 +100,7 @@ const Facts = () => {
                 data-purecounter-end="2"
                 data-purecounter-duration="1"
                 className="purecounter"
-              ></span>
+              />
               <p>
                 <strong>Years of Experience</strong> <br />
                 Work Experience

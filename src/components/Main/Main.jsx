@@ -13,7 +13,6 @@ import {
 
 const Main = () => {
   return (
-    // About Section
     <main id="main">
       <About />
       <Facts />

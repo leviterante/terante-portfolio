@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import {
-  FaTwitter,
+  FaGithub,
   FaFacebook,
   FaInstagram,
-  FaGoogle,
   FaLinkedin,
   FaHome,
   FaUser,
@@ -71,22 +71,22 @@ const Header = () => {
             className="img-fluid rounded-circle"
           />
           <h1 className="text-light">
-            <a href="/">Levi Terante</a>
+            <Link to="/">Levi Terante</Link>
           </h1>
           <div className="social-links mt-3 text-center">
-            <a href="/" className="social">
-              <FaTwitter />
+            <a href="https://github.com/leviterante" className="social">
+              <FaGithub />
             </a>
-            <a href="/" className="social">
+            <a href="https://www.facebook.com/levi.terante" className="social">
               <FaFacebook />
             </a>
-            <a href="/" className="social">
+            <a href="https://www.instagram.com/levs29_/" className="social">
               <FaInstagram />
             </a>
-            <a href="/" className="social">
-              <FaGoogle />
-            </a>
-            <a href="/" className="social">
+            <a
+              href="https://www.linkedin.com/in/levi-terante-728826bb/"
+              className="social"
+            >
               <FaLinkedin />
             </a>
           </div>
@@ -95,52 +95,52 @@ const Header = () => {
         <nav id="navbar" className="nav-menu navbar">
           <ul>
             <li>
-              <a href="#hero" className="nav-link scrollto">
+              <Link to="/#hero" className="nav-link scrollto">
                 <i>
                   <FaHome />
                 </i>
                 <span>&nbsp;Home</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#about" className="nav-link scrollto">
+              <Link to="/#about" className="nav-link scrollto">
                 <i>
                   <FaUser />
                 </i>
                 <span>&nbsp;About</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#resume" className="nav-link scrollto">
+              <Link to="/#resume" className="nav-link scrollto">
                 <i>
                   <FaFile />
                 </i>
                 <span>&nbsp;Resume</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#portfolio" className="nav-link scrollto">
+              <Link to="/#portfolio" className="nav-link scrollto">
                 <i>
                   <FaBook />
                 </i>
                 <span>&nbsp;Portfolio</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#services" className="nav-link scrollto">
+              <Link to="/#services" className="nav-link scrollto">
                 <i>
                   <FaServer />
                 </i>
                 <span>&nbsp;Services</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#contact" className="nav-link scrollto">
+              <Link to="/#contact" className="nav-link scrollto">
                 <i>
                   <FaEnvelope />
                 </i>
                 <span>&nbsp;Contact</span>
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>

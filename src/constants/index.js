@@ -1,3 +1,5 @@
 import images from "./images";
+import projects from "./projects";
+import testimonials from "./testimonials";
 
-export { images };
+export { images, projects, testimonials };

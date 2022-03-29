@@ -15,10 +15,12 @@ const Services = () => {
         <div className="section-title">
           <h2>Services</h2>
           <p>
-            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-            aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-            quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-            fugiat sit in iste officiis commodi quidem hic quas.
+            I have worked on a couple of projects. This gave me the opportunity
+            to gather knowledge about multiple aspects of web development rather
+            than focusing on a particular task. As a result of which, I could
+            engage with several different languages & development techniques
+            too. It gave me primitive exposure to several different type of
+            skills needed for web developement.
           </p>
         </div>
 
@@ -29,12 +31,11 @@ const Services = () => {
                 <MdOutlineDesignServices />
               </i>
             </div>
-            <h4 className="title">
-              <a href="">App Designer</a>
-            </h4>
+            <h4 className="title">App Designer</h4>
             <p className="description">
-              Voluptatum deleniti atque corrupti quos dolores et quas molestias
-              excepturi sint occaecati cupiditate non provident
+              Create programs for smartphones, tablets and computers. An app
+              designer may create games, weather apps, social networking tools,
+              maps and navigation programs, and much more.
             </p>
           </div>
           <div
@@ -47,12 +48,12 @@ const Services = () => {
                 <AiOutlineAppstoreAdd />
               </i>
             </div>
-            <h4 className="title">
-              <a href="">Web App Developer</a>
-            </h4>
+            <h4 className="title">Web App Developer</h4>
             <p className="description">
-              Voluptatum deleniti atque corrupti quos dolores et quas molestias
-              excepturi sint occaecati cupiditate non provident
+              Capable of coding, designing, troubleshooting, monitoring updates
+              and possible security threats, and providing end user support. As
+              well as handle some project management tasks on the journey to
+              building a new application.
             </p>
           </div>
           <div
@@ -65,12 +66,10 @@ const Services = () => {
                 <BsHddNetwork />
               </i>
             </div>
-            <h4 className="title">
-              <a href="">Networks Admin</a>
-            </h4>
+            <h4 className="title">Networks Admin</h4>
             <p className="description">
-              Voluptatum deleniti atque corrupti quos dolores et quas molestias
-              excepturi sint occaecati cupiditate non provident
+              Ensures that all computer networks are operating to meet the needs
+              of the organization.
             </p>
           </div>
           <div
@@ -83,12 +82,12 @@ const Services = () => {
                 <SiArkecosystem />
               </i>
             </div>
-            <h4 className="title">
-              <a href="">System Admin</a>
-            </h4>
+            <h4 className="title">Data Entry Clerk</h4>
             <p className="description">
-              Voluptatum deleniti atque corrupti quos dolores et quas molestias
-              excepturi sint occaecati cupiditate non provident
+              Transferring data from paper formats into computer files or
+              database systems. Typing in data provided directly from customers.
+              Creating spreadsheets with large numbers of figures without
+              errors.
             </p>
           </div>
           <div
@@ -101,12 +100,11 @@ const Services = () => {
                 <MdManageAccounts />
               </i>
             </div>
-            <h4 className="title">
-              <a href="">Project Manager</a>
-            </h4>
+            <h4 className="title">Systems Administrator</h4>
             <p className="description">
-              Voluptatum deleniti atque corrupti quos dolores et quas molestias
-              excepturi sint occaecati cupiditate non provident
+              Can manage, troubleshoot and proactively update hardware and
+              software assets to prevent downtime or zero-day exploits from
+              occurring.
             </p>
           </div>
           <div
@@ -119,12 +117,13 @@ const Services = () => {
                 <MdArchitecture />
               </i>
             </div>
-            <h4 className="title">
-              <a href="">Database Architect</a>
-            </h4>
+            <h4 className="title">Database Architect</h4>
             <p className="description">
-              Voluptatum deleniti atque corrupti quos dolores et quas molestias
-              excepturi sint occaecati cupiditate non provident
+              Maintains database by determining structural requirements, and
+              developing and installing solutions. Ensures security of all
+              information and computer systems and digital data. Ensures
+              adherence to government regulations and guidelines for
+              technological systems and safeguarding of data.
             </p>
           </div>
         </div>

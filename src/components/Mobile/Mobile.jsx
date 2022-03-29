@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { GiHamburgerMenu, GiCancel } from "react-icons/gi";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 import { select, on } from "../../assets/js/main";
 

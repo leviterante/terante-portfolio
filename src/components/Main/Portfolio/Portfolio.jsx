@@ -1,23 +1,39 @@
 import React, { useState, useEffect } from "react";
-import { GiSheikahEye } from "react-icons/gi";
 import { AiOutlineLink } from "react-icons/ai";
 import Isotope from "isotope-layout";
+import { Link } from "react-router-dom";
 
-import { images } from "../../../constants";
+import { projects } from "../../../constants";
+import { select, on } from "../../../assets/js/main";
 
 const Portfolio = () => {
-  // state for storing the isotope object, with an initial value of null
   const [isotope, setIsotope] = useState(null);
-  // state for storing the filter keyword, with an initial value of *, which matches everything
   const [filterKey, setFilterKey] = useState("*");
+
   useEffect(() => {
-    setIsotope(
-      new Isotope(".portfolio-container", {
-        // filter-container: className of the parent of the isotope elements
-        itemSelector: ".portfolio-item", // filter-item: className of the isotope elements
-        layoutMode: "fitRows",
-      })
-    );
+    let portfolioContainer = select(".portfolio-container");
+    if (portfolioContainer) {
+      setIsotope(
+        new Isotope(".portfolio-container", {
+          itemSelector: ".portfolio-item",
+          layoutMode: "fitRows",
+        })
+      );
+      let portfolioFilters = select("#portfolio-filters li", true);
+
+      on(
+        "click",
+        "#portfolio-filters li",
+        function (e) {
+          e.preventDefault();
+          portfolioFilters.forEach(function (el) {
+            el.classList.remove("filter-active");
+          });
+          this.classList.add("filter-active");
+        },
+        true
+      );
+    }
   }, []); // [] makes this useEffect work like a componentDidMount in a class component
   useEffect(() => {
     if (isotope) {
@@ -34,10 +50,10 @@ const Portfolio = () => {
         <div className="section-title">
           <h2>Portfolio</h2>
           <p>
-            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-            aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-            quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-            fugiat sit in iste officiis commodi quidem hic quas.
+            As a developer, I love engaging in learning new techniques & develop
+            new skills. The one thing I love about being a developer is that
+            there is always more to learn. A developer never would & cannot
+            claim to know everything.
           </p>
         </div>
         <div className="row" data-aos="fade-up">
@@ -46,8 +62,8 @@ const Portfolio = () => {
               <li onClick={() => setFilterKey("*")} className="filter-active">
                 All
               </li>
-              <li onClick={() => setFilterKey("filter-app")}>App</li>
-              <li onClick={() => setFilterKey("filter-card")}>Card</li>
+              <li onClick={() => setFilterKey("filter-ui")}>UI/UX</li>
+              <li onClick={() => setFilterKey("filter-js")}>Javascript</li>
               <li onClick={() => setFilterKey("filter-web")}>Web</li>
             </ul>
           </div>
@@ -58,50 +74,23 @@ const Portfolio = () => {
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          <div className="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div className="portfolio-wrap">
-              <img src={images.portfolio1} className="img-fluid" alt="" />
-              <div className="portfolio-links">
-                <a
-                  href={images.portfolio1}
-                  data-gallery="portfolioGallery"
-                  className="portfolio-lightbox"
-                  title="App 1"
-                >
-                  <i>
-                    <GiSheikahEye />
-                  </i>
-                </a>
-                <a href="/" title="More Details">
-                  <i>
-                    <AiOutlineLink />
-                  </i>
-                </a>
+          {projects.map((project) => (
+            <div className={project.className} key={project.id}>
+              <div className="portfolio-wrap">
+                <img src={project.img[0]} className="img-fluid" alt="" />
+                <div className="portfolio-links">
+                  <Link
+                    to={"/portfolio_details/" + project.id}
+                    title="More Details"
+                  >
+                    <i>
+                      <AiOutlineLink />
+                    </i>
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div className="portfolio-wrap">
-              <img src={images.rain1} className="img-fluid" alt="" />
-              <div className="portfolio-links">
-                <a
-                  href={images.rain1}
-                  data-gallery="portfolioGallery"
-                  className="portfolio-lightbox"
-                  title="App 1"
-                >
-                  <i>
-                    <GiSheikahEye />
-                  </i>
-                </a>
-                <a href="/" title="More Details">
-                  <i>
-                    <AiOutlineLink />
-                  </i>
-                </a>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
